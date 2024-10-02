@@ -34,16 +34,25 @@
   width: 50%;
   height: 100vh;
   color:#18345E;
+
+}
+
+.divTXT a{
+  text-decoration: none;
+
 }
 
 .divTXT h1{
   font-size: 35px;
   margin-bottom: 10px;
+  
 }
 
 span{
   color: #0a16c5;
   font-weight: bolder;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 
