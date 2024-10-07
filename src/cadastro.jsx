@@ -45,7 +45,7 @@ function Cadastro() {
 
         <form onSubmit={onSubmit}>
           
-            
+          <h1>Oi</h1>            
           <h1>Cadastre-se</h1> 
           <label htmlFor="nome_usuario">Nome Completo</label>
           <input className='inp' name="nome_usuario" value={nome} onChange={(e)=>setNome(e.target.value)} type="text"></input>
