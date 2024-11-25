@@ -14,7 +14,7 @@ function Entrar() {
     event.preventDefault(); 
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/login', new URLSearchParams({  //formato esperado pelo FastAPI (ED)
+      const response = await axios.post('https://projeto-agendamento.onrender.com/login', new URLSearchParams({  //formato esperado pelo FastAPI (ED)
         username: email, // 'username' do email no back-end
         password: senha, // 'password' senha
       }), {

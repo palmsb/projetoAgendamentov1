@@ -3,6 +3,7 @@ import Principal from './mainPage'
 import Entrar from './entrar';
 import Agendamento from './agendamento';
 import Servicos from './servicos';
+import Admin from './admPage'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 

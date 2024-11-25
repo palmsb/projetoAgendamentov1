@@ -7,7 +7,7 @@ import { BsInstagram } from "react-icons/bs";
 import { ImWhatsapp } from "react-icons/im";
 
 const SideBar = ({ active }) => {
-  const [username, setUsername] = useState('Usuário'); // Estado para o nome do usuário
+  const [nome_usuario, setUsername] = useState('Usuário'); // Estado para o nome do usuário
 
   // Função para fechar a sidebar
   const closeSideBar = () => {
@@ -18,7 +18,7 @@ const SideBar = ({ active }) => {
     const token = localStorage.getItem('access_token');
 
     if (token) {
-      axios.get('http://127.0.0.1:8000/rota-protegida', {
+      axios.get('https://projeto-agendamento.onrender.com/rota-protegida', {
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -39,7 +39,7 @@ const SideBar = ({ active }) => {
         <div className='topSide'>
           <div className='perfil'>
             <img src="../src/img/fotoLogin.jpg" width={30} alt="Foto do Usuário" />
-            <h3>Olá {username}</h3> {/* Exibe o nome do usuário */}
+            <h3>Olá {nome_usuario}</h3> {/* Exibe o nome do usuário */}
           </div> 
           <IoMdClose className='iconeX' onClick={closeSideBar} size={30} />
         </div>

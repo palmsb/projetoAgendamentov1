@@ -5,16 +5,16 @@ import SideBar from './sideBar';
 
 function NavBar() {
   const [sideBar, setSideBar] = useState(false);
-  const [username, setUsername] = useState('Usuário'); // Estado para o nome do usuário
+  const [nome_usuario, setUsername] = useState('Usuário'); // Estado para o nome do usuário
 
   const showSideBar = () => setSideBar(!sideBar);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('access_token');
 
     if (token) {
       // Faz a requisição à rota protegida usando o token no cabeçalho
-      axios.get('http://127.0.0.1:8000/rota-protegida', {
+      axios.get('https://projeto-agendamento.onrender.com/rota-protegida', {
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -37,7 +37,7 @@ function NavBar() {
           <IoMenu onClick={showSideBar} className='iconeBar' size={45} />
           {sideBar && <SideBar active={setSideBar} />}
           
-          <p>Olá {username}, Bem-vindo!</p> {/* Exibe o nome do usuário */}
+          <p>Olá {nome_usuario}, Bem-vindo!</p> {/* Exibe o nome do usuário */}
         </div>
       </nav>
     </>
